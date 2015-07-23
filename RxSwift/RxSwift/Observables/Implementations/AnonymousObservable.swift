@@ -9,7 +9,7 @@
 import Foundation
 
 public class AnonymousObservable<Element> : ObservableBase<Element> {
-    typealias SubscribeHandler = (ObserverOf<Element>) -> Disposable
+    public typealias SubscribeHandler = (ObserverOf<Element>) -> Disposable
    
     let subscribeHandler: SubscribeHandler
     
