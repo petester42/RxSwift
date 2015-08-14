@@ -87,13 +87,10 @@ extension NSURLSession {
                 }
             }
             
-            
-            if let t = task { t.resume() }
-            else { sendError(observer, UnknownError) }
-            
+            task.resume()           
                 
             return AnonymousDisposable {
-                task?.cancel()
+                task.cancel()
             }
         }
     }
